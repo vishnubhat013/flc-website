@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        sans: ["var(--font-inter)", ...fontFamily.sans],
       },
       colors: {
         black: {
@@ -23,14 +23,12 @@ export default {
         },
         border: "hsl(var(--border))",
         background: "hsl(var(--background))",
+        card: "hsl(var(--card))",
         foreground: "hsl(var(--foreground))",
+        foreground2: "hsl(var(--secondary-foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
         },
       },
       borderRadius: {

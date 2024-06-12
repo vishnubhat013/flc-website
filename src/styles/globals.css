@@ -10,9 +10,9 @@
     .dark {
         --background: 0 0% 8%;
         --foreground: 0 0% 98%;
-        --bgSecondary: 0 0% 13%;
+        --card: 0 0% 13%;
         --border: 0 0% 19%;
-        --primary: 212 91% 49%;
+        --primary: 212 83% 49%;
         --primary-foreground: 0 0% 64%;
         --secondary-foreground: 0 0% 64%;
         --radius: 0.5rem

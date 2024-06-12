@@ -9,7 +9,36 @@ export default async function Home() {
   const hello = await api.post.hello({ text: "from tRPC" });
   const session = await auth();
 
-  return <main className="flex h-screen w-full">Hello</main>;
+  return (
+    <main className="bg-background text-foreground border-red flex h-screen w-full flex-col items-center justify-evenly border-2 border-red-600 p-5">
+      <div className="flex flex-col items-center gap-3 text-center">
+        <p className="text-5xl font-medium">Styles</p>
+        <p className="text-foreground2 text-xl">
+          Edit styles/globals.css to make changes
+        </p>
+      </div>
+
+      <div className="flex w-[140px] flex-col items-center gap-2">
+        <p className="text-foreground2">Background</p>
+        <div className="bg-background border-border h-[60px] w-full rounded-sm border-2" />
+      </div>
+
+      <div className="flex w-[140px] flex-col items-center gap-2">
+        <p className="text-foreground2">Card</p>
+        <div className="bg-card border-border h-[60px] w-full rounded-sm border" />
+      </div>
+
+      <div className="flex w-[140px] flex-col items-center gap-2">
+        <p className="text-foreground2">border</p>
+        <div className="bg-border border-border h-[60px] w-full rounded-sm border" />
+      </div>
+
+      <div className="flex w-[140px] flex-col items-center gap-2">
+        <p className="text-foreground2">primary</p>
+        <div className="bg-primary border-border h-[60px] w-full rounded-sm border" />
+      </div>
+    </main>
+  );
 }
 
 async function CrudShowcase() {
