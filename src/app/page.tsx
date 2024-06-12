@@ -10,7 +10,7 @@ export default async function Home() {
   const session = await auth();
 
   return (
-    <main className="border-red flex h-screen w-full flex-col items-center justify-evenly border-2 bg-background p-5 text-foreground">
+    <main className="border-red flex h-screen w-full flex-col items-center justify-evenly bg-background p-5 text-foreground">
       <div className="flex flex-col items-center gap-3 text-center">
         <p className="text-5xl font-medium">Styles</p>
         <p className="text-xl text-foreground2">
