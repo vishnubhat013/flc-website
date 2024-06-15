@@ -40,7 +40,7 @@ export default async function Home() {
     </main>
   );
 }
-
+/* 
 async function CrudShowcase() {
   const session = await auth();
   if (!session?.user) return null;
@@ -59,3 +59,4 @@ async function CrudShowcase() {
     </div>
   );
 }
+ */

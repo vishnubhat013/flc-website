@@ -1,6 +1,7 @@
 import "~/styles/globals.css";
 import { TRPCReactProvider } from "~/trpc/react";
 import { Inter } from "next/font/google";
+import Navbar from "./_components/navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,7 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} dark`}>
       <body>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <TRPCReactProvider>
+          <Navbar/>
+          {children}
+          </TRPCReactProvider>
       </body>
     </html>
   );
