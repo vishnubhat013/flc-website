@@ -1,54 +1,13 @@
-body {
-    overflow: visible !important;
-    margin-right: 0 !important;
-    @apply bg-background text-foreground;
-}
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-    :root {
-        --primary: 50 98% 64%;
-        --primary-foreground: 0 0% 8%;
-        --secondary: 0 84% 60%;
-        --secondary-foreground: 0 0% 98%;
-        --radius: 0.5rem;
-        /* }
-    .dark { */
-        --background: 0 0% 8%;
-        --foreground: 0 0% 98%;
-        --card: 0 0% 13%;
-        --border: 0 0% 19%;
-
-        --accent: 0 0% 14.9%;
-        --accent-foreground: 0 0% 98%;
-    }
-
-}
-
-/*/register page/*/
+/* AuthForm.module.css */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-
-body,
-input {
-  font-family: 'Montserrat', sans-serif;
-}
 
 .container {
   position: relative;
   width: 100%;
-  background-color:none;
+  background-color: none; /* Ensure this is a valid color value */
   min-height: 100vh;
   overflow: hidden;
 }
@@ -73,7 +32,7 @@ input {
   z-index: 5;
 }
 
-form {
+.form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,18 +44,18 @@ form {
   grid-row: 1 / 2;
 }
 
-form.sign-up-form {
+.form.sign-up-form {
   opacity: 0;
   z-index: 1;
 }
 
-form.sign-in-form {
+.form.sign-in-form {
   z-index: 2;
 }
 
 .title {
   font-size: 2.2rem;
-  color:white;
+  color: white;
   margin-bottom: 10px;
 }
 
@@ -113,7 +72,7 @@ form.sign-in-form {
   position: relative;
 }
 
-.input-field i {
+.input-field > i {
   text-align: center;
   line-height: 55px;
   color: #acacac;
@@ -121,7 +80,7 @@ form.sign-in-form {
   font-size: 1.1rem;
 }
 
-.input-field input {
+.input-field > input {
   background: none;
   outline: none;
   border: none;
@@ -131,7 +90,7 @@ form.sign-in-form {
   color: #333;
 }
 
-.input-field input::placeholder {
+.input-field > input::placeholder {
   color: #aaa;
   font-weight: 500;
 }
@@ -154,6 +113,7 @@ form.sign-in-form {
 .btn:hover {
   background-color: #f98c39;
 }
+
 .panels-container {
   position: absolute;
   height: 100%;
@@ -195,7 +155,6 @@ form.sign-in-form {
 
 .left-panel {
   pointer-events: all;
-    font:bold;
   padding: 3rem 17% 2rem 12%;
 }
 
@@ -206,8 +165,6 @@ form.sign-in-form {
 
 .panel .content {
   color: #fff;
-  font:bold;
-  font-size: large;
   transition: transform 0.9s ease-in-out;
   transition-delay: 0.6s;
 }
@@ -254,12 +211,12 @@ form.sign-in-form {
   left: 25%;
 }
 
-.container.sign-up-mode form.sign-up-form {
+.container.sign-up-mode .form.sign-up-form {
   opacity: 1;
   z-index: 2;
 }
 
-.container.sign-up-mode form.sign-in-form {
+.container.sign-up-mode .form.sign-in-form {
   opacity: 0;
   z-index: 1;
 }
@@ -282,9 +239,10 @@ form.sign-in-form {
     min-height: 800px;
     height: 100vh;
   }
+
   .signin-signup {
     width: 100%;
-    top: 75%;
+    top: 95%;
     transform: translate(-50%, -100%);
     transition: 1s 0.8s ease-in-out;
   }
@@ -381,18 +339,20 @@ form.sign-in-form {
 }
 
 @media (max-width: 570px) {
-  form {
+  .form {
     padding: 0 1.5rem;
   }
 
   .image {
     display: none;
   }
+
   .panel .content {
     padding: 0.5rem 1rem;
   }
+
   .container {
-    padding: 0 rem;
+    padding: 1.5rem;
   }
 
   .container:before {
@@ -405,4 +365,3 @@ form.sign-in-form {
     left: 50%;
   }
 }
-
